@@ -1,0 +1,75 @@
+{
+  "name": "react-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
+    "test": "react-scripts test",
+    "coverage": "npm test -- --coverage",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "SECURITY": "",
+    "BLANK SPACE": "",
+    "DONT TOUCH EJECT": "",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.26%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "proxy": "http://localhost:55537/",
+  "dependencies": {
+    "@loadable/component": "^5.10.3",
+    "bootstrap": "^4.3.1",
+    "p-min-delay": "^3.1.0",
+    "promise-timeout": "^1.3.0",
+    "react": "^16.10.2",
+    "react-app-polyfill": "^1.0.4",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-snap": "^1.23.0",
+    "redux": "^4.0.4",
+    "redux-promise-middleware": "^6.1.1",
+    "type-to-reducer": "^1.2.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "http-proxy-middleware": "^0.20.0",
+    "husky": "^3.0.8",
+    "jest-enzyme": "^7.1.1",
+    "lint-staged": "^9.4.2",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.10.2",
+    "source-map-explorer": "^2.1.0"
+  }
+}
